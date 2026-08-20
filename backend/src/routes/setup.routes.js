@@ -1,8 +1,13 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const bcrypt = require('bcrypt');
-const pool = require('../db/pool');
+import express from 'express';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import bcrypt from 'bcrypt';
+import pool from '../db/pool.js';
+
+// __dirname doesn't exist in ES modules — this reconstructs it
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const router = express.Router();
 
@@ -13,7 +18,7 @@ const router = express.Router();
  *
  * Protected by a secret query param so randoms can't trigger it.
  * DELETE THIS FILE (and its mount in server.js) once your database
- * is set up — it should not stay live permanently..
+ * is set up — it should not stay live permanently.
  *
  * Usage: GET https://your-app.onrender.com/setup?key=YOUR_SETUP_KEY
  */
@@ -56,4 +61,4 @@ router.get('/setup', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

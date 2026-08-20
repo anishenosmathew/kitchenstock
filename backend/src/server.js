@@ -1,12 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
 
-const authRoutes = require('./routes/auth.routes');
-const userRoutes = require('./routes/user.routes');
-const inventoryRoutes = require('./routes/inventory.routes');
-const householdRoutes = require('./routes/household.routes');
-const setupRoutes = require('./routes/setup.routes'); // TEMPORARY — remove after DB setup
+import authRoutes from './routes/auth.routes.js';
+import userRoutes from './routes/user.routes.js';
+import inventoryRoutes from './routes/inventory.routes.js';
+import householdRoutes from './routes/household.routes.js';
+import setupRoutes from './routes/setup.routes.js'; // TEMPORARY — remove after DB setup
 
 const app = express();
 
