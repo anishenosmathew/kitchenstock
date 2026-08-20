@@ -13,7 +13,7 @@ const router = express.Router();
  *
  * Protected by a secret query param so randoms can't trigger it.
  * DELETE THIS FILE (and its mount in server.js) once your database
- * is set up — it should not stay live permanently.
+ * is set up — it should not stay live permanently..
  *
  * Usage: GET https://your-app.onrender.com/setup?key=YOUR_SETUP_KEY
  */
