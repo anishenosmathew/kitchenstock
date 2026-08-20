@@ -1,0 +1,121 @@
+:root {
+  --cream: #FBF9F4;
+  --card: #FFFFFF;
+  --ink: #221D14;
+  --ink-soft: #6b6558;
+  --line: rgba(34, 29, 20, 0.08);
+
+  --sage: #6B8F5C;
+  --sage-text: #3f6033;
+  --sage-bg: rgba(107, 143, 92, 0.16);
+
+  --terracotta: #C1442D;
+  --terracotta-text: #C1442D;
+  --terracotta-bg: rgba(193, 68, 45, 0.14);
+
+  --mustard: #D9A440;
+  --mustard-text: #8a611c;
+  --mustard-bg: rgba(217, 164, 64, 0.2);
+
+  --tile-yellow: #F3E3B8;
+  --tile-green: #CFE3C4;
+  --tile-pink: #F4CFD2;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: #EDEAE2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/*
+ * Mobile-first app shell.
+ * On phones (the default) the screen fills the viewport edge-to-edge.
+ * On wider viewports (tablet/desktop), it's centered as a phone-width
+ * card, which is the correct behavior for a mobile-shaped app viewed
+ * on a bigger screen — no awkward full-width stretching.
+ */
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  .app-shell {
+    max-width: 420px;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(34, 29, 20, 0.18);
+  }
+}
+
+.page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 76px; /* room for the fixed bottom nav */
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+.text-input, .unit-select {
+  width: 100%;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 13px 14px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.field { margin-bottom: 16px; }
+.field-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.error-text {
+  font-size: 13px;
+  color: var(--terracotta-text);
+  margin: -4px 0 14px;
+}
