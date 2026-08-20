@@ -3,7 +3,6 @@ import express from 'express';
 import cors from 'cors';
 
 import authRoutes from './routes/auth.routes.js';
-import userRoutes from './routes/user.routes.js';
 import inventoryRoutes from './routes/inventory.routes.js';
 import householdRoutes from './routes/household.routes.js';
 import setupRoutes from './routes/setup.routes.js'; // TEMPORARY — remove after DB setup
@@ -22,7 +21,6 @@ app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/', setupRoutes); // TEMPORARY — remove after DB setup
 
 app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
 
 // Everything under /api/kitchens/:kitchenId/* requires auth + kitchen membership.
 // Both route files are mounted here so :kitchenId is shared across them.
