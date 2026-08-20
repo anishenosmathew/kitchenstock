@@ -5,7 +5,6 @@ import cors from 'cors';
 import authRoutes from './routes/auth.routes.js';
 import inventoryRoutes from './routes/inventory.routes.js';
 import householdRoutes from './routes/household.routes.js';
-import setupRoutes from './routes/setup.routes.js'; // TEMPORARY — remove after DB setup
 
 const app = express();
 
@@ -18,7 +17,6 @@ app.use(express.json());
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-app.use('/', setupRoutes); // TEMPORARY — remove after DB setup
 
 app.use('/api/auth', authRoutes);
 
