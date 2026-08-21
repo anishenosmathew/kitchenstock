@@ -42,7 +42,7 @@ export default function JoinKitchen() {
           value={code}
           onChange={(e) => setCode(e.target.value.toUpperCase())}
           maxLength={6}
-          style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, letterSpacing: '0.1em', textAlign: 'center' }}
+          style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, letterSpacing: '.0009em', textAlign: 'center' }}
           autoFocus
         />
         {error && <p className="error-text">{error}</p>}
