@@ -23,7 +23,8 @@ export default function Shopping() {
     api.getShoppingList(kitchen.id, token).then((data) => setItems(data.items));
   }, [kitchen, token]);
 
-  const shareText = items.map((i) => `• ${i.name} — ${i.quantity}${i.unit}`).join('\n');
+  const shareText = items.map((i) => `• ${i.name}`).join('\n');
+  // const shareText = items.map((i) => `• ${i.name} — ${i.quantity}${i.unit}`).join('\n');
   const shareUrl = `https://wa.me/?text=${encodeURIComponent(`KitchenStock shopping list:\n\n${shareText}`)}`;
 
   return (
