@@ -51,7 +51,7 @@ export default function Shopping() {
                 <p style={{ fontSize: 14.5, fontWeight: 700, margin: 0 }}>{item.name}</p>
                 <p style={{ fontSize: 12, color: 'var(--ink-soft)', margin: '2px 0 0' }}>{item.location} · {item.category}</p>
               </div>
-              <p style={{ fontSize: 14, fontWeight: 700, margin: 0 }}>{item.quantity} {item.unit === 'count' ? 'nos' : item.unit}</p>
+              {/* <p style={{ fontSize: 14, fontWeight: 700, margin: 0 }}>{item.quantity} {item.unit === 'count' ? 'nos' : item.unit}</p> */}
             </div>
           </div>
         ))}
